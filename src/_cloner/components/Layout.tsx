@@ -1,31 +1,20 @@
-import { useState } from "react";
-import Nav from "./Nav";
-import { KTSVG } from "./KTSvg";
-import Drawer from "./Drawer";
 import NavItem from "./NavItem";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-    // const [isOpen, setIsOpen] = useState<boolean>(false);
-
-    // const handleOpenDrawer = () => {
-    //     setIsOpen(true);
-    // };
-
-    // function handleCloseDrawer() {
-    //     setIsOpen(false);
-    // }
-
     return (
         <>
             {/* Aside */}
-            <aside className="fixed top-10 bottom-10 right-10 flex w-96">
-                <div className="bg-indigo-700 flex flex-col flex-grow rounded-3xl">
-                
+            <aside className="fixed bottom-10 right-10 top-10 flex w-96">
+                <div className="flex flex-grow flex-col rounded-3xl bg-indigo-800">
+                    <div className="p-12 font-yekan_bold text-2xl text-white">
+                        مدیریت امور مشتریان
+                    </div>
                 </div>
             </aside>
             <div className="flex flex-col pr-96 pt-10">
                 {/* Navbar */}
-                <div className="mx-auto bg-white h-auto w-full">
+                <div className="mx-auto h-auto w-full bg-white">
                     <div className="container">
                         <div className="flex items-center justify-between">
                             <div className="flex flex-col">
@@ -47,7 +36,7 @@ const Layout = () => {
                 {/* Content */}
                 <main className="pt-10">
                     <div className="container mx-auto">
-                        <div className="h-96 border-4 border-dashed border-gray-400"></div>
+                        <Outlet />
                     </div>
                 </main>
             </div>
@@ -56,26 +45,3 @@ const Layout = () => {
 };
 
 export default Layout;
-
-            {/* <div className="flex flex-1 flex-col"> */}
-
-{
-    /* <div className="flex-column-fluid flex flex-row">
-                    <div className="hidden lg:block">
-                        <Aside />
-                    </div>
-                    <div>
-                        <Drawer isOpen={isOpen} onClose={handleCloseDrawer} />
-                        <span onClick={handleOpenDrawer}>
-                            <KTSVG
-                                path={"/media/logos/gen007.svg"}
-                                svgClassName="h-[18px]"
-                            />
-                        </span>
-                    </div>
-                    <div className="wrapper flex-row-fluid flex flex-col lg:pr-[35rem] lg:pt-[2rem] ">
-                        <Nav />
-                        <div className="content container"></div>
-                    </div>
-                </div> */
-}

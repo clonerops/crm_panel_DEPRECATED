@@ -1,7 +1,9 @@
-import Layout from "../../../_cloner/components/Layout";
-
 const Home = () => {
-    return <Layout />;
+    return (
+        <>
+            <div className="h-96 border-4 border-dashed border-gray-400"></div>
+        </>
+    );
 };
 
 export default Home;
