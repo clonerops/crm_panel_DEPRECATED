@@ -1,11 +1,14 @@
 import { FC } from "react";
 import NavItem from "./NavItem";
+import { useDarkMode } from "../helpers/darkmodeHelpers";
 
 interface IProps {
     handleIsVisible: () => void;
 }
 
 const Nav: FC<IProps> = ({ handleIsVisible }) => {
+    const { toggleDarkMode } = useDarkMode();
+
     return (
         <nav className="mx-auto h-auto w-full bg-white">
             <div className="container">
@@ -24,7 +27,10 @@ const Nav: FC<IProps> = ({ handleIsVisible }) => {
                     <div className="flex gap-4">
                         <NavItem url="/media/logos/gen007.svg" />
                         <NavItem url="/media/logos/com003.svg" />
-                        <NavItem url="/media/logos/gen060.svg" />
+                        <NavItem
+                            onClick={toggleDarkMode}
+                            url="/media/logos/gen060.svg"
+                        />
                     </div>
                 </div>
             </div>
