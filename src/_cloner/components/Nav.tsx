@@ -11,16 +11,16 @@ const Nav: FC<IProps> = ({ handleIsVisible }) => {
 
     return (
         <nav className="mx-auto h-auto w-full bg-white">
-            <div className="container">
+            <div className="dark:bg-gray-700 container">
                 <div className="flex items-center justify-between">
                     <div onClick={handleIsVisible} className="flex md:hidden">
                         <NavItem url="/media/logos/abs015.svg" />
                     </div>
                     <div className="hidden flex-col md:flex">
-                        <h2 className="font-yekan_bold text-3xl text-primary">
+                        <h2 className="dark:text-white font-yekan_bold text-3xl text-primary">
                             ابوالفضل معصومی
                         </h2>
-                        <sub className="font-yekan_bold text-xl text-gray-500">
+                        <sub className="dark:text-white font-yekan_bold text-xl text-gray-500">
                             مدیر سایت
                         </sub>
                     </div>

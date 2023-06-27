@@ -22,7 +22,7 @@ const Layout = () => {
             )}
             {/* Aside */}
             <Aside isVisible={isVisible} />
-            <div className="flex flex-col pt-10 md:pr-96">
+            <div className="flex flex-col pt-10 md:pr-96 dark:bg-gray-700">
                 {/* Navbar */}
                 <Nav handleIsVisible={handleIsVisible} />
                 {/* Content */}
